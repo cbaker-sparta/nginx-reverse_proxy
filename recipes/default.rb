@@ -4,6 +4,9 @@
 #
 # Copyright:: 2019, The Authors, All Rights Reserved.
 
+apt_update 'update_sources' do
+  action :update
+end
 
 include_recipe 'nginx'
 
@@ -24,7 +27,7 @@ link '/etc/nginx/sites-enabled/proxy.conf' do
   notifies :restart, 'service[nginx]'
 end
 
-link '/etc/nginx/sites-enabled/default;' do
+link '/etc/nginx/sites-enabled/default' do
   notifies :restart, 'service[nginx]'
   action :delete
 end

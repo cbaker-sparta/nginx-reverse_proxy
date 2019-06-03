@@ -18,11 +18,3 @@ chef_version '>= 13.0'
 # a Supermarket.
 #
 # source_url 'https://github.com/<insert_org_here>/nginx_proxy'
-
-
-depends 'nginx'
-depends 'build-essential', '>= 5.0'
-depends 'ohai', '>= 4.1.0'
-depends 'yum-epel'
-
-source_url 'https://github.com/sous-chefs/nginx'

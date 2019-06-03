@@ -8,8 +8,6 @@ apt_update 'update_sources' do
   action :update
 end
 
-include_recipe 'nginx'
-
 package 'nginx'
 
 service 'nginx' do
